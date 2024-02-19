@@ -1,0 +1,392 @@
+# Git global ignore pattern
+###########################
+
+# Video files are too large for git
+*.mp4
+
+
+# C programming
+*.[oa]
+
+*.lo
+*.la
+
+# VHDL projects
+###############
+*/sim*/work/
+*/sim*/simprim/
+*/sim*/unisim /
+*/sim*/transcript 
+*/sim*/vsim.wlf 
+
+# Latex
+#######
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+
+## Intermediate documents:
+*.dvi
+*-converted-to.*
+# these rules might exclude image files for figures etc.
+# *.ps
+# *.eps
+# *.pdf
+
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.brf
+*.run.xml
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+## Auxiliary and intermediate files from other packages:
+
+# algorithms
+*.alg
+*.loa
+
+# achemso
+acs-*.bib
+
+# amsthm
+*.thm
+
+# beamer
+*.nav
+*.snm
+*.vrb
+
+# comment
+*.cut
+
+#(e)ledmac/(e)ledpar
+*.end
+*.[1-9]
+*.[1-9][0-9]
+*.[1-9][0-9][0-9]
+*.[1-9]R
+*.[1-9][0-9]R
+*.[1-9][0-9][0-9]R
+*.eledsec[1-9]
+*.eledsec[1-9]R
+*.eledsec[1-9][0-9]
+*.eledsec[1-9][0-9]R
+*.eledsec[1-9][0-9][0-9]
+*.eledsec[1-9][0-9][0-9]R
+
+# glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+
+# gnuplottex
+*-gnuplottex-*
+
+# hyperref
+*.brf
+
+# knitr
+*-concordance.tex
+*.tikz
+*-tikzDictionary
+
+# listings
+*.lol
+
+# makeidx
+*.idx
+*.ilg
+*.ind
+*.ist
+
+# minitoc
+*.maf
+*.mtc
+*.mtc[0-9]
+*.mtc[1-9][0-9]
+
+# mylatexformat
+*.fmt
+
+#pythontex
+*.pytxcode
+pythontex-files-*/
+
+# Miktex
+miktex.ini 
+
+
+# Emacs
+#######
+# -*- mode: gitignore; -*-
+# Emacs backup files
+*.~*~
+*~
+\#*\#
+# Emacs backups of hidden files, like ".gitignore.~3~"
+.*.~*~
+.\#*
+
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+
+# Windows global pattern
+########################
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+# *.lnk
+
+
+
+# Microsoft Office
+##################
+*.tmp
+
+# Word temporary
+~$*.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*
+
+# LibreOffice
+#############
+# LibreOffice locks
+.~lock.*#
+
+# ModelSim
+##########
+# ignore ModelSim generated files and directories (temp files and so on)
+[_@]*
+
+# ignore compilation output of ModelSim
+*.mti
+*.dat
+*.dbs
+*.psm
+*.bak
+*.cmp
+*.bsf
+work/
+
+# ignore simulation output of ModelSim
+wlf*
+*.wlf
+*.vstf
+*.ucdb
+cov*/
+transcript*
+sc_dpiheader.h
+vsim.dbg
+
+# intelFPGA/Altera Quartus II
+#############################
+**/quartus/*.json
+**/quartus/*.qws
+**/quartus/db/
+**/quartus/incremental_db/
+**/quartus/output_files/*.rpt
+**/quartus/output_files/*.cdf
+**/quartus/output_files/*.done
+**/quartus/output_files/*.smsg
+**/quartus/output_files/*.summary
+**/quartus/output_files/*.hexout
+**/quartus/output_files/*.jdi
+**/quartus/output_files/*.pin
+**/quartus/output_files/*.sld
+**/quartus/output_files/*.ttf
+**/quartus/simulation/
+**/quartus/qdb/
+**/quartus/**/*.BAK.qsys
+**/quartus/**/*.txt
+**/quartus/**/*.csv
+**/quartus/*.ddb
+**/quartus/**/*.qdf
+**/quartus/*.json
+**/quartus/**/*.sld
+**/quartus/**/*.spd
+**/quartus/**/*.xml
+**/quartus/**/*_inst.v
+**/quartus/**/*_inst.vhd
+**/quartus/**/*_bb.v
+**/quartus/**/*_bb.v
+**/quartus/*.sopcinfo
+*.sof
+
+# Qsys/Plattform Designer
+.qsys_edit/
+hps_isw_handoff/
+synthesis/
+ip_upgrade_port_diff_reports/
+
+# intel Monitor program
+*.axf
+*.objdump
+*.srec
+
+
+
+
+# Precision Synthesis (Mentor Graphics)
+#######################################
+temp.edf
+exemplar.his
+
+# Corel Draw
+############
+Backup_of*.cdr
+
+
+
+# VUNIT
+#########
+vunit_out/
+vunit_outputs/
+
+# VS-Code
+#########
+.vscode
+
+# Diamond
+#########
+# Helpful in finding the files set that realy defines things
+# and should not be ignored: Diamond|File|Save Project As...
+# uncheck "Copy generated files"
+# Lattice Bug: .ddt seems to be missing (Deployment Tool settings)
+#
+# Ignore everything generated in the impl* directories
+**/diamond/impl*/*
+# Some files are generated in the tool directory of the project
+# instead of collecting them in a directory.
+**/diamond/*.dir/
+**/diamond/*.xml
+**/diamond/*.htm
+**/diamond/*.ccl
+**/diamond/*.ini
+**/diamond//.recovery
+**/diamond/*.html
+programmer_settings.xcf
+# These are the files describing the project
+# XML project description (other project settings files are referenced from here)
+# .ldf: Lattice Diamond file
+!**/diamond/*.ldf
+# .sty: Implementation strategies (= settings for implementation which
+# are an essential part of the project settings)
+!**/diamond/*.sty
+# Logic preferences
+!**/diamond/*.lpf
+# Timing preferences (not needed if identical to settings in *.lpf)
+!**/diamond/*.tpf
+# Power Calculator
+!**/diamond/*.pcf
+# If Synplify Pro is used standalone you'll have a project file for it.
+# Unfortunately located in the impl* directory:
+!**/diamond/impl*/*.prj
+# In case generated IP cores are used in the project the directories they reside
+# in are also a part of the project.
+# The main description seems to be located in the file with the .sbx extension
+# Format is SGML. Not sure, but the .sbx file may contain the descriptions for
+# all IPs that are part of a project making it the projects description for
+# the Clarity Designer tool (= Lattice IP generator)
+!**/*.sbx
+
+# Lattice Semi Radiant
+######################
+programmer_settings.xcf
+**/radiant/*.dir/
+# Ignore everything generated in the impl* directories
+**/radiant/impl*/*
+# But the Synplify Pro Projects are not generated:
+!**/radiant/impl*/*.prj
+**/radiant/*.dir/
+**/radiant/*.xml
+**/radiant/*.htm
+**/radiant/*.ccl
+**/radiant/*.ini
+**/radiant//.recovery
+**/radiant/*.html
+
+# ToDo: Add knowledge gained for Diamond
+
+# Efinix Efinity
+################
+**/efini*/outflow/*
+**/efini*/work_*/*
+**/efini*/*/outflow/*
+**/efini*/*/work_*/*
+*.gtkw
+*.vcd
+*.vdb
+.lock
+
+# GHDL outputs
+units/**/g-level=debug/project_database/*
+
+vhdl_ls.toml
+
+# Generated Gitinfo
+FpgaGitinfo.txt
