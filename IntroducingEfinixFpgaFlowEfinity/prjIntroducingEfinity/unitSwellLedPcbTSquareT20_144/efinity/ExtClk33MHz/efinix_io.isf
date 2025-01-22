@@ -1,0 +1,78 @@
+# Efinity Interface Configuration
+# Version: 2024.2.294.1.19
+# Date: 2025-01-21 14:51
+#
+# Copyright (C) 2013 - 2024 Efinix Inc. All rights reserved.
+#
+# Device: T20Q144
+# Package: 144-pin QFP (final)
+# Project: efinix
+# Configuration mode: active (x1)
+# Timing Model: C4 (final)
+
+
+# Device setting
+design.set_device_property("1A","VOLTAGE","3.3","IOBANK")
+design.set_device_property("1B","VOLTAGE","3.3","IOBANK")
+design.set_device_property("1C_1D","VOLTAGE","3.3","IOBANK")
+design.set_device_property("1E","VOLTAGE","3.3","IOBANK")
+design.set_device_property("3A","VOLTAGE","3.3","IOBANK")
+design.set_device_property("3B_3C","VOLTAGE","3.3","IOBANK")
+design.set_device_property("3D","VOLTAGE","3.3","IOBANK")
+design.set_device_property("3E","VOLTAGE","3.3","IOBANK")
+design.set_device_property("4A","VOLTAGE","3.3","IOBANK")
+design.set_device_property("4B","VOLTAGE","3.3","IOBANK")
+design.set_device_property("BR","VOLTAGE","1.2","IOBANK")
+design.set_device_property("TL","VOLTAGE","1.2","IOBANK")
+design.set_device_property("TR","VOLTAGE","1.2","IOBANK")
+design.set_device_property("cfg","CBSEL_PIN","cfg_CBSEL","RU")
+design.set_device_property("cfg","CLK_PIN","","RU")
+design.set_device_property("cfg","CONFIG_PIN","cfg_CONFIG","RU")
+design.set_device_property("cfg","ENA_PIN","cfg_ENA","RU")
+design.set_device_property("cfg","ERROR_PIN","cfg_ERROR","RU")
+design.set_device_property("cfg","INVERT_CLK_EN","0","RU")
+design.set_device_property("cfg","RECONFIG_EN","0","RU")
+
+# Create instance
+design.create_output_gpio("D400")
+design.create_output_gpio("D401")
+design.create_output_gpio("D402")
+design.create_output_gpio("D403")
+design.create_output_gpio("Dnone")
+design.create_pll_input_clock_gpio("PLL_IN")
+design.create_input_gpio("S100")
+design.create_input_gpio("S101")
+design.create_block("PLL_OUT","PLL")
+
+# Set property, non-defaults
+design.set_property("D400","DRIVE_STRENGTH","2")
+design.set_property("D403","OUT_CLK_PIN","Clk")
+design.set_property("S100","PULL_OPTION","WEAK_PULLUP")
+design.set_property("S101","SCHMITT_TRIGGER","1")
+design.set_property("S101","PULL_OPTION","WEAK_PULLUP")
+design.set_property("PLL_OUT","CLKOUT0_EN","1","PLL")
+design.set_property("PLL_OUT","CLKOUT1_EN","0","PLL")
+design.set_property("PLL_OUT","CLKOUT2_EN","0","PLL")
+design.set_property("PLL_OUT","REFCLK_SOURCE","EXTERNAL","PLL")
+design.set_property("PLL_OUT","CLKOUT0_DIV","16","PLL")
+design.set_property("PLL_OUT","CLKOUT0_PHASE","0","PLL")
+design.set_property("PLL_OUT","CLKOUT0_PIN","PLL_OUT","PLL")
+design.set_property("PLL_OUT","EXT_CLK","EXT_CLK0","PLL")
+design.set_property("PLL_OUT","LOCKED_PIN","","PLL")
+design.set_property("PLL_OUT","M","58","PLL")
+design.set_property("PLL_OUT","N","3","PLL")
+design.set_property("PLL_OUT","O","1","PLL")
+design.set_property("PLL_OUT","REFCLK_FREQ","33.0","PLL")
+design.set_property("PLL_OUT","RSTN_PIN","","PLL")
+design.set_property("PLL_OUT","FEEDBACK_MODE","INTERNAL","PLL")
+
+# Set resource assignment
+design.assign_pkg_pin("D400","139")
+design.assign_pkg_pin("D401","18")
+design.assign_pkg_pin("D402","16")
+design.assign_pkg_pin("D403","15")
+design.assign_pkg_pin("Dnone","17")
+design.assign_pkg_pin("PLL_IN","132")
+design.assign_pkg_pin("S100","87")
+design.assign_pkg_pin("S101","89")
+design.assign_resource("PLL_OUT","PLL_TL0","PLL")
